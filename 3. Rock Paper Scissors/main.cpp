@@ -7,7 +7,7 @@ bool choiceValidation (char list[], char choice, int listSize);
 int main() {
     char choice;
     char choiceList[8] = {'r', '1', 'p', '2', 's', '3', 'e', '4'};
-    std::cout << "Rock Paper Scissors!" << std::endl;
+    std::cout << "Rock Paper Scissors (1.0)!" << std::endl;
 
     while (choice != '4' && tolower(choice) != 'e') {
         std::cout << "\nRock (R or 1), Paper (P or 2), Scissors (S or 3), or Exit (E or 4)" << std::endl;
