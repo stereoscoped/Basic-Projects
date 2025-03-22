@@ -98,9 +98,6 @@ int main() {
         std::cout << "+------------------------+" << std::endl;
 
     }
-    for (int i = 0; i < strlen(word); ++i) {
-        std::cout << correctIndex[i];
-    }
     delete[] word;
     return 0;
 }
