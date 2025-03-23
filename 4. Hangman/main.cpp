@@ -27,7 +27,7 @@ int main() {
     loadWords(totalLineCount, inFile, words);
 
     // Big loop
-    welcome();
+    menu(incorrectLimit, hangmanText, lineCount);
     char choice = 'Y';
     while (toupper(choice) != 'N') {
         // Guesses and count declaration 

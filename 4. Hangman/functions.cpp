@@ -1,6 +1,11 @@
 #include "functions.h"
 
 void display(char *word, int *correctIndex, std::string **hangmanText, int incorrectCount, int lineCount, char *incorrectLetters, int incorrectLimit){
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
     std::cout << "Guess the " << strlen(word) << " letter word: ";
     for (int j = 0; j < strlen(word); ++j) {
         if (correctIndex[j] == 1) {
@@ -49,6 +54,12 @@ void loadWords (int &totalLineCount, std::ifstream &inFile, std::string *&words)
     }
 }
 
-void welcome () {
-    std::cout << "Welcome to my hangman game (0.2)!\n" << std::endl;
+void menu (int incorrectLimit, std::string **hangmanText, int lineCount) {
+    std::cout << "Welcome to HANGMAN (1.0)!";
+    for (int j = 0; j < lineCount; ++j) {
+        std::cout << std::endl << hangmanText[incorrectLimit][j];
+    }
+    std::cout << "\nPress Enter to continue...";
+    std::cin.get();
+    std::cin.ignore(100, '\n');
 }
