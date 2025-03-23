@@ -60,6 +60,5 @@ void menu (int incorrectLimit, std::string **hangmanText, int lineCount) {
         std::cout << std::endl << hangmanText[incorrectLimit][j];
     }
     std::cout << "\nPress Enter to continue...";
-    std::cin.get();
     std::cin.ignore(100, '\n');
 }
