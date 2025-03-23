@@ -50,5 +50,5 @@ void loadWords (int &totalLineCount, std::ifstream &inFile, std::string *&words)
 }
 
 void welcome () {
-    std::cout << "Welcome to my hangman game (0.1)!\n" << std::endl;
+    std::cout << "Welcome to my hangman game (0.2)!\n" << std::endl;
 }

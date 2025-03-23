@@ -11,5 +11,6 @@
 void display(char *word, int *correctIndex, std::string **hangmanText, int incorrectCount, int lineCount, char *incorrectLetters, int incorrectLimit);
 void cleanup(std::string** hangmanText, int stages, std::string * words);
 void loadWords(int &totalLineCount, std::ifstream &inFile, std::string *&words);
+void welcome();
 
 #endif
