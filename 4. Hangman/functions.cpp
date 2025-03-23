@@ -55,7 +55,7 @@ void loadWords (int &totalLineCount, std::ifstream &inFile, std::string *&words)
 }
 
 void menu (int incorrectLimit, std::string **hangmanText, int lineCount) {
-    std::cout << "Welcome to HANGMAN (1.0)!";
+    std::cout << "Welcome to HANGMAN (1.1)!";
     for (int j = 0; j < lineCount; ++j) {
         std::cout << std::endl << hangmanText[incorrectLimit][j];
     }

@@ -7,11 +7,17 @@ int main() {
     std::ifstream inFile("basic_english_2000.txt");
     if (!inFile) {
         std::cerr << "Error opening english file." << std::endl;
+        std::cout << "\nPress Enter to continue...";
+        std::cin.get();
+        std::cin.ignore(100, '\n');
         return 1;
     }
     std::ifstream hangmanFile("hangman.txt");
     if (!hangmanFile) {
         std::cerr << "Error opening hangman.txt file." << std::endl;
+        std::cout << "\nPress Enter to continue...";
+        std::cin.get();
+        std::cin.ignore(100, '\n');
         return 1;
     }
 
