@@ -1,22 +1,21 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 
-class List {
-    private:
-        int memberCount;
-        std::string *  member;
-    public:
-        List ();
-        ~ List ();
-        void getMember(std::string member);
-        void addMember(std::string member);
-};
-
-void List::getMember(std::string member) {
-    std::cout << member << std::endl;
-}
 
 int main() {
+    std::ifstream inFile("list.txt");
+    int size = 0;
+    std::string line;
+    if (!inFile) {
+        std::cout << "Could not read list.txt" << std::endl;
+        return 1;
+    }
+    while (std::getline(inFile, line)) {
+        ++size;
+    }
+    std::cout << size << std::endl;
     std::cout << "Welcome To my To Do List" << std::endl;
+    
     return 0;
 }
