@@ -2,6 +2,9 @@
 #include <fstream>
 #include <string>
 
+// Function Prototypes
+void printList ();
+void addList ();
 
 int main() {
     std::ifstream inFile("list.txt");
