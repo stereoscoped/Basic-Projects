@@ -17,7 +17,21 @@ int main() {
     while (std::getline(inFile, line)) {
         ++size;
     }
+
+    inFile.clear();
+    inFile.seekg(0, std::ios::beg);
+
+    std::string list[size];
+    int i = 0;
+    while (std::getline(inFile, line)) {
+        list[i] = line;
+        ++i;
+    }
+    for (int j = 0; j < size; ++j) {
+        std::cout << list[j] << std::endl;
+    }
     std::cout << size << std::endl;
+    std::cout << i << std::endl;
     std::cout << "Welcome To my To Do List" << std::endl;
     
     return 0;
