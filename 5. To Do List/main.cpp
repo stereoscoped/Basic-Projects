@@ -33,6 +33,8 @@ int main() {
     std::cout << size << std::endl;
     std::cout << i << std::endl;
     std::cout << "Welcome To my To Do List" << std::endl;
-    
+    std::ofstream outFile("list.txt");
+    std::getline(std::cin, line);
+    outFile << line;
     return 0;
 }
