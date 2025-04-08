@@ -35,6 +35,9 @@ int main() {
     std::cout << "Welcome To my To Do List" << std::endl;
     std::ofstream outFile("list.txt");
     std::getline(std::cin, line);
-    outFile << line;
+    outFile << line << "\n";
+    for (int k = 0; k < size; ++k) {
+        outFile << list[k] << "\n";
+    }
     return 0;
 }
