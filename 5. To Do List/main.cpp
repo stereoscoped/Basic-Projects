@@ -27,17 +27,23 @@ int main() {
         list[i] = line;
         ++i;
     }
-    for (int j = 0; j < size; ++j) {
-        std::cout << list[j] << std::endl;
-    }
-    std::cout << size << std::endl;
-    std::cout << i << std::endl;
-    std::cout << "Welcome To my To Do List" << std::endl;
+    bool cont = true;
     std::ofstream outFile("list.txt");
-    std::getline(std::cin, line);
-    outFile << line << "\n";
-    for (int k = 0; k < size; ++k) {
-        outFile << list[k] << "\n";
+    while (cont) {
+        std::cout << "Welcome To my To Do List" << std::endl;
+        for (int i = 0; i < size; ++i) {
+            std::cout << "- " << list[i] << std::endl;
+        }
+        std::cout << "Add to the list\n>> ";
+        std::getline(std::cin, line);
+        if (line == "q" || line == "Q") {
+            cont = false;
+        }
+        for (int k = 0; k < size; ++k) {
+            outFile << list[k] << "\n";
+        }
+        outFile << line << "\n";
     }
+
     return 0;
 }
